@@ -6,15 +6,16 @@
   <title>JSを使わないポップオーバー</title>
   <style>
     :root {
-      --c-accent: #D7F205;
-      --c-pale: #fafffa;
-      --c-grey: #35362e;
-      --c-pale-grey: #c4c4c4;
+      --c-shadow-grey: #e5e5e5;
+      --c-bg-grey: #fafafa;
+      --c-typography: #2f2f2f;
+      --c-white: #ffffff;
     }
     body {
       font-family: sans-serif;
       font-size: 16px;
-      color: var(--c-grey);
+      color: var(--c-typography);
+      background-color: var(--c-bg-grey);
     }
     h1 {
       font-weight: normal;
@@ -23,31 +24,30 @@
     button {
       width: 200px;
       height: 40px;
-      background: var(--c-accent);
-      border: none;
+      border: 2px solid var(--c-typography);
       border-radius: 20px;
       cursor: pointer;
+      background: var(--c-white);
+      color: var(--c-typography);
+      font-size: 16px;
     }
     .container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      padding: 48px;
     }
     .popoverContent:popover-open {
       width: 300px;
+      height: 120px;
       border-radius: 8px;
-      border: 2px solid var(--c-accent);
-      color: var(--c-grey);
+      border: none;
       padding: 24px;
-      box-shadow: 8px 8px 10px var(--c-pale-grey);
-      background: var(--c-pale);
+      box-shadow: 8px 8px 10px var(--c-shadow-grey);
+      background: var(--c-white);
     }
   </style>
 </head>
 <body>
 <div class="container">
-  <h1>1. JSを使わないポップオーバー</h1>
-  <button popovertarget="popover">ポップオーバーを開閉する</button>
+  <button popovertarget="popover">Click me!</button>
   <div id="popover" popover class="popoverContent">
     <p>JavaScriptを使わずに最低限の機能が実現できます。</p>
   </div>
