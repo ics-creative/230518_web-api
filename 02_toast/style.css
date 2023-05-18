@@ -5,9 +5,7 @@
   --c-bg-grey: #fafafa;
   --c-typography: #2f2f2f;
   --c-green: #46D763;
-  /* --c-pale-green: #E6F4E7; */
   --c-red: #FE8964;
-  /* --c-pale-red: #FFE7E1; */
   --c-white: #ffffff;
 }
 body {
@@ -48,14 +46,14 @@ button {
   margin: 0 auto;
   opacity: 0;
 }
-.toastContent {
+.toast-content {
   font-size: 14px;
   font-weight: bold;
   color: var(--c-typography);
   display: flex;
   align-items: center;
 }
-.toastContent::before {
+.toast-content::before {
   content: "";
   display: inline-block;
   width: 24px;
@@ -64,7 +62,7 @@ button {
   background-repeat: no-repeat;
   background-size: 24px;
 }
-.toastButton {
+.toast-button {
   display: inline-block;
   width: 24px;
   height: 24px;
@@ -81,7 +79,7 @@ button {
 .toast.success {
   border-left: 3px solid var(--c-green);
 }
-.toast.success > .toastContent::before {
+.toast.success > .toast-content::before {
   mask-image: url("./images/i_check.svg");
   -webkit-mask-image: url("./images/i_check.svg");
   background-color: var(--c-green);
@@ -89,7 +87,7 @@ button {
 .toast.error {
   border-left: 3px solid var(--c-red);
 }
-.toast.error > .toastContent::before {
+.toast.error > .toast-content::before {
   mask-image: url("./images/i_error.svg");
   -webkit-mask-image: url("./images/i_error.svg");
   background-color: var(--c-red);

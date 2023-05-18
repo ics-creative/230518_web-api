@@ -6,11 +6,11 @@ const createToastElm = (message, cssName) => {
   // コンテンツ
   const content = document.createElement("p");
   content.textContent = message;
-  content.classList.add("toastContent");
+  content.classList.add("toast-content");
   toast.appendChild(content);
   // 閉じるボタン
   const closeButton = document.createElement("button");
-  closeButton.classList.add("toastButton");
+  closeButton.classList.add("toast-button");
   closeButton.addEventListener("click", () => removeToast(toast));
   toast.appendChild(closeButton);
   return toast;
