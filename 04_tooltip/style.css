@@ -1,0 +1,4 @@
+.tooltip {
+  bottom: anchor(implicit top);
+  left: anchor(implicit left);
+}
