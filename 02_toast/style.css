@@ -6,89 +6,96 @@
   --c-typography: #2f2f2f;
   --c-green: #46D763;
   --c-red: #FE8964;
-  --c-white: #ffffff;
+  --c-white: #fff;
 }
+
 body {
   font-family: sans-serif;
   font-size: 16px;
   color: var(--c-typography);
   background-color: var(--c-bg-grey);
 }
+
 p {
   margin: 0;
 }
+
 button {
   width: 200px;
   height: 40px;
-  border: 2px solid var(--c-typography);
-  border-radius: 20px;
+  font-size: 16px;
+  color: var(--c-typography);
   cursor: pointer;
   background: var(--c-white);
-  color: var(--c-typography);
-  font-size: 16px;
+  border: 2px solid var(--c-typography);
+  border-radius: 20px;
 }
+
 .container {
-  height: 50vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  height: 50vh;
 }
+
 .toast {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
   width: 300px;
   padding: 16px;
-  box-shadow: 0 4px 8px var(--c-shadow-grey);
-  border: none;
-  justify-content: space-between;
-  align-items: center;
-  background-color: var(--c-white);
   margin: 0 auto;
+  background-color: var(--c-white);
+  border: none;
+  box-shadow: 0 4px 8px var(--c-shadow-grey);
   opacity: 0;
 }
+
 .toast-content {
+  display: flex;
+  align-items: center;
   font-size: 14px;
   font-weight: bold;
   color: var(--c-typography);
-  display: flex;
-  align-items: center;
 }
+
 .toast-content::before {
-  content: "";
   display: inline-block;
   width: 24px;
   height: 24px;
   margin-right: 8px;
+  content: "";
   background-repeat: no-repeat;
   background-size: 24px;
 }
+
 .toast-button {
   display: inline-block;
   width: 24px;
   height: 24px;
-  border: none;
   cursor: pointer;
   background-color: var(--c-pale-grey);
-  -webkit-mask-image: url(./images/i_close.svg);
-  mask-image: url(./images/i_close.svg);
-  -webkit-mask-position: center;
+  border: none;
+  mask-image: url("./images/i_close.svg");
   mask-position: center;
-  -webkit-mask-size: 24px;
   mask-size: 24px;
 }
+
 .toast.success {
   border-left: 3px solid var(--c-green);
 }
+
 .toast.success > .toast-content::before {
-  mask-image: url("./images/i_check.svg");
-  -webkit-mask-image: url("./images/i_check.svg");
   background-color: var(--c-green);
+  mask-image: url("./images/i_check.svg");
 }
+
 .toast.error {
   border-left: 3px solid var(--c-red);
 }
+
 .toast.error > .toast-content::before {
-  mask-image: url("./images/i_error.svg");
-  -webkit-mask-image: url("./images/i_error.svg");
   background-color: var(--c-red);
+  mask-image: url("./images/i_error.svg");
 }

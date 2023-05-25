@@ -14,9 +14,9 @@ const createToastElm = (message, cssName) => {
   closeButton.addEventListener("click", () => removeToast(toast));
   toast.appendChild(closeButton);
   return toast;
-}
+};
 
-const setupToast = ({message, cssName}) => {
+const setupToast = ({ message, cssName }) => {
   // トーストを作成
   const toast = createToastElm(message, cssName);
   // DOMに追加
@@ -31,23 +31,23 @@ const setupToast = ({message, cssName}) => {
 
   // トーストが作成された時と削除された時に並び直す
   toast.addEventListener("toggle", (event) => {
-    if(event.newState === "closed") {
+    if (event.newState === "closed") {
       alignToast(true);
     } else {
       alignToast(false);
     }
   });
-}
+};
 
 const alignToast = (withMoveAnim) => {
   const toasts = document.querySelectorAll(".toast");
   // トーストを順番に縦に並べる
   toasts.forEach((toast, index) => {
     toast.style.transition = withMoveAnim ? "translate 0.2s linear, opacity 0.2s linear" : "opacity 0.2s linear";
-    toast.style.translate = `0px ${(56 + 10) * index}px`; 
+    toast.style.translate = `0px ${(56 + 10) * index}px`;
     toast.style.opacity = 1;
-  })
-}
+  });
+};
 
 const removeToast = (toast) => {
   // hidePopoverメソッドで非表示にする
@@ -56,13 +56,13 @@ const removeToast = (toast) => {
   toast.remove();
   // setTimeoutを解除する
   clearTimeout(toast.dataset.timer);
-}
+};
 
 const button = document.getElementById("button");
 button.addEventListener("click", () => {
   // ランダムに表示させる内容を作る
   const content = Math.random() > 0.5
-    ? {message: "Success!", cssName: "success"}
-    : {message: "Error!", cssName: "error"};
+    ? { message: "Success!", cssName: "success" }
+    : { message: "Error!", cssName: "error" };
   setupToast(content);
 });
