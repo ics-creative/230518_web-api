@@ -5,17 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>JSを使わないポップオーバー</title>
   <style>
-    :root {
-      --c-shadow-grey: #e5e5e5;
-      --c-bg-grey: #fafafa;
-      --c-typography: #2f2f2f;
-      --c-white: #ffffff;
-    }
     body {
       font-family: sans-serif;
       font-size: 16px;
-      color: var(--c-typography);
-      background-color: var(--c-bg-grey);
+      color: #2f2f2f;
+      background-color: #fafafa;
     }
     h1 {
       font-weight: normal;
@@ -24,11 +18,11 @@
     button {
       width: 200px;
       height: 40px;
-      border: 2px solid var(--c-typography);
+      border: 2px solid #2f2f2f;
       border-radius: 20px;
       cursor: pointer;
-      background: var(--c-white);
-      color: var(--c-typography);
+      background: #ffffff;
+      color: #2f2f2f;
       font-size: 16px;
     }
     .container {
@@ -40,8 +34,12 @@
       border-radius: 8px;
       border: none;
       padding: 24px;
-      box-shadow: 8px 8px 10px var(--c-shadow-grey);
-      background: var(--c-white);
+      box-shadow: 8px 8px 10px #707070;
+      background: #ffffff;
+    }
+    .popover-content::backdrop {
+      background-color: #505050;
+      opacity: 0.5;
     }
   </style>
 </head>
