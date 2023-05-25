@@ -77,8 +77,11 @@ button {
   cursor: pointer;
   background-color: var(--c-pale-grey);
   border: none;
+  -webkit-mask-image: url("./images/i_close.svg");
   mask-image: url("./images/i_close.svg");
+  -webkit-mask-position: center;
   mask-position: center;
+  -webkit-mask-size: 24px;
   mask-size: 24px;
 }
 
@@ -88,6 +91,7 @@ button {
 
 .toast.success > .toast-content::before {
   background-color: var(--c-green);
+  -webkit-mask-image: url("./images/i_check.svg");
   mask-image: url("./images/i_check.svg");
 }
 
@@ -97,5 +101,6 @@ button {
 
 .toast.error > .toast-content::before {
   background-color: var(--c-red);
+  -webkit-mask-image: url("./images/i_error.svg");
   mask-image: url("./images/i_error.svg");
 }

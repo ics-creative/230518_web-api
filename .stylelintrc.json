@@ -9,9 +9,6 @@
       true,
       {"ignoreFunctions": ["anchor"]}
     ],
-    "property-no-vendor-prefix":[
-      true,
-      {"ignoreProperties": ["-webkit-mask-image"]}
-    ]
+    "property-no-vendor-prefix": false
   }
 }
