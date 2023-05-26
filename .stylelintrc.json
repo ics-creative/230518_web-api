@@ -9,6 +9,6 @@
       true,
       {"ignoreFunctions": ["anchor"]}
     ],
-    "property-no-vendor-prefix": false
+    "property-no-vendor-prefix": null
   }
 }

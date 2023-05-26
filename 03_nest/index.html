@@ -11,40 +11,37 @@
   <header>
     <nav>
       <ul class="navigation-list">
-        <li class="navigation-list_item"><a href="#">Home</a></li>
-        <li class="navigation-list_item"><a href="#">About</a></li>
-        <li class="navigation-list_item popover-container">
-          <a href="#">Portfolio</a>
+        <li class="navigation-list-item"><a href="#">Home</a></li>
+        <li class="navigation-list-item"><a href="#">About</a></li>
+        <li class="navigation-list-item popover-container">
+          <a href="#" class="arrow">Portfolio</a>
           <!-- 1つめのポップオーバー -->
-          <div class="popover popover__portfolio" popover>
+          <div class="popover popover-portfolio" popover>
             <ul class="child-list">
-              <li class="child-list_item popover-container">
-                <a href="#">Web Design<span>3</span></a>
+              <li class="child-list-item popover-container">
+                <a href="#" class="arrow arrow__right">Web Design</a>
                 <!-- 2つめのポップオーバー -->
-                <div class="popover popover__webdesign" popover>
-                  <ul class="grandchild-list">
-                    <li class="grandchild-list_item"><a href="#">Shopping site</a></li>
-                    <li class="grandchild-list_item"><a href="#">Corporate site</a></li>
-                    <li class="grandchild-list_item"><a href="#">Blog</a></li>
+                <div class="popover popover-webdesign" popover>
+                  <ul class="child-list">
+                    <li class="child-list-item"><a href="#">Shopping site</a></li>
+                    <li class="child-list-item"><a href="#">Corporate site</a></li>
+                    <li class="child-list-item"><a href="#">Blog</a></li>
                   </ul>
                 </div>
               </li>
-              <li class="child-list_item popover-container">
-                <a href="#">UI Design<span>1</span></a>
+              <li class="child-list-item popover-container">
+                <a href="#" class="arrow arrow__right">UI Design</a>
                 <!-- 3つめのポップオーバー -->
-                <div class="popover popover__uidesign" popover>
-                  <ul class="grandchild-list">
-                    <li class="grandchild-list_item"><a href="#">SNS</a></li>
+                <div class="popover popover-uidesign" popover>
+                  <ul class="child-list">
+                    <li class="child-list-item"><a href="#">SNS</a></li>
                   </ul>
                 </div>
-              </li>
-              <li class="child-list_item">
-                <a href="#">Graphic Design<span>0</span></a>
               </li>
             </ul>
           </div>
-        </li class="navigation-list_item">
-        <li class="navigation-list_item"><a href="#">Contact</a></li>
+        </li class="navigation-list-item">
+        <li class="navigation-list-item"><a href="#">Contact</a></li>
       </ul>
     </nav>
   </header>
