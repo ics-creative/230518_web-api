@@ -30,6 +30,7 @@ const setupToast = ({ message, cssName }) => {
  * トーストを作成します。
  * @param {string} message 表示するメッセージ
  * @param {string} cssName cssのクラス名
+ * @return {HTMLDivElement} 作成したトーストエレメント
  */
 const createToastElm = (message, cssName) => {
   const toast = document.createElement("div");
