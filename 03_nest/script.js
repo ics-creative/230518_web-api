@@ -18,18 +18,24 @@ popoverContainers.forEach((container) => {
 const openPopoverOf = (container) => {
   // containerから一番近いポップオーバーを取得する
   const popover = container.querySelector(".popover");
+  if (popover == null) {
+    return;
+  }
   // まだ開いていない場合だけshowPopoverを呼ぶ
   if (!popover.matches(":popover-open")) {
-    popover?.showPopover();
+    popover.showPopover();
   }
 };
 
 const closePopoverOf = (container) => {
   // containerから一番近いポップオーバーを取得する
   const popover = container.querySelector(".popover");
+  if (popover == null) {
+    return;
+  }
   // まだ閉じていない場合だけshowPopoverを呼ぶ
   if (popover.matches(":popover-open")) {
-    popover?.hidePopover();
+    popover.hidePopover();
   }
 };
 

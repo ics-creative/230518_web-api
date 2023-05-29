@@ -28,8 +28,8 @@ const setupToast = ({ message, cssName }) => {
 
 /**
  * トーストを作成します。
- * @param message 表示するメッセージ
- * @param cssName cssのクラス名
+ * @param {string} message 表示するメッセージ
+ * @param {string} cssName cssのクラス名
  */
 const createToastElm = (message, cssName) => {
   const toast = document.createElement("div");
@@ -64,7 +64,7 @@ const alignToast = (withMoveAnim) => {
 
 /**
  * トーストを削除します。
- * @param toast 削除したいトースト
+ * @param {HTMLDivElement} toast 削除したいトースト
  */
 const removeToast = (toast) => {
   // hidePopoverメソッドで非表示にする

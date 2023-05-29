@@ -4,6 +4,9 @@ links.forEach((link) => {
   link.addEventListener("mouseenter", () => {
     const id = link.id;
     const tooltip = document.querySelector(`[anchor=${id}]`);
+    if (tooltip == null) {
+      return;
+    }
     if (!tooltip.matches(":popover-open")) {
       tooltip.showPopover();
     }
@@ -11,6 +14,9 @@ links.forEach((link) => {
   link.addEventListener("mouseleave", () => {
     const id = link.id;
     const tooltip = document.querySelector(`[anchor=${id}]`);
+    if (tooltip == null) {
+      return;
+    }
     if (tooltip.matches(":popover-open")) {
       tooltip.hidePopover();
     }
