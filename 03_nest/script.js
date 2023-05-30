@@ -33,7 +33,7 @@ const closePopoverOf = (container) => {
   if (popover == null) {
     return;
   }
-  // まだ閉じていない場合だけshowPopoverを呼ぶ
+  // まだ閉じていない場合だけhidePopoverを呼ぶ
   if (popover.matches(":popover-open")) {
     popover.hidePopover();
   }
