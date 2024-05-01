@@ -20,12 +20,10 @@ h1 {
 }
 
 .tooltip {
-  inset: auto;
-  bottom: anchor(implicit top);
-  left: anchor(implicit left);
+  inset-area: span-right top;
   max-width: 200px;
   padding: 8px;
-  margin-bottom: 4px;
+  margin: 0 0 4px;
   font-size: 14px;
   line-height: 1.25rem;
   border: solid 1px #bbb;
