@@ -20,7 +20,7 @@ h1 {
 }
 
 .tooltip {
-  inset-area: span-right top;
+  position-area: span-right top;
   max-width: 200px;
   padding: 8px;
   margin: 0 0 4px;
